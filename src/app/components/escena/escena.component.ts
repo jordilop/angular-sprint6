@@ -36,6 +36,6 @@ export class EscenaComponent {
   next = () => this.currentSentence === this.textos.length - 1 ? this.currentSentence = 0 : this.currentSentence++;
   prev = () => this.currentSentence === 0 ? this.currentSentence = this.textos.length - 1 : this.currentSentence--;
 
-  getUrlImage = () => `url(../../../assets/img/${this.textos[this.currentSentence].img})`;
+  getUrlImage = () => `url(./assets/img/${this.textos[this.currentSentence].img})`;
 
 }
