@@ -1,0 +1,7 @@
+<div>
+    <button (click)="prev()">Anterior</button>
+    <button (click)="next()">Següent</button>
+</div>
+<div *ngFor="let element of textos; let i=index" >
+    <p [ngClass]="i===currentSentence ? 'active' : ''">{{ element.text }}</p>
+</div>
