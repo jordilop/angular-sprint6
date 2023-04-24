@@ -1,1 +1,10 @@
-<app-escena></app-escena>
+<app-escena *ngIf="show; else welcome"></app-escena>
+<ng-template #welcome>
+    <h3>Intro Angular</h3>
+    <p>Aquest és el primer lliurament d'Angular. Amb l'assimilació dels conceptes bàsics de JavaScript, veuràs que amb l'ajuda d'Angular, podràs executar d'una manera més pràctica les aplicacions més potents, en comparació amb JavaScript pla (vanilla JavaScript).</p>
+    <p>Pren-te amb calma aquest lliurament, els primers passos d'Angular són més complicats d'entendre. Tanmateix, és primordial saber amb quina modalitat es construeixen les aplicacions d'aquest tipus de programació.</p>
+    <p>No oblidis que si utilitzem Angular, la web es divideix en petits trossos o components, que són reutilitzables. Aquestes parts poden ser grans o petites, però, generalment, estan ben definides: tenen un propòsit únic i obvi.</p>
+    <p>En aquest lliurament posarem en pràctica els conceptes bàsics que has après d'Angular a partir del següent cas pràctic:</p>
+    <p>un/a client/a té una web de gestió empresarial desenvolupada amb Angular (com a producte principal) i ens ha demanat que desenvolupem un tutorial, en el qual, mitjançant dos botons els nous usuaris/àries poden avançar o retrocedir en els consells, modificant-se el text d'ajuda i la imatge de fons.</p>
+    <button (click)="show = !show">Començar</button>
+</ng-template>
